@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Picky Pal</title>
+    <script src="Scripts/jquery-3.7.1.js"></script>
+    <script src="Scripts/pickypal.js"></script>
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <!-- Header Logo -->
+    <img class="logo" src="Images/Logo.svg" alt="Logo">
+    <!-- Header ends -->
+<!-- Page 1 begins -->
+<div class="page1">
+    <div class="content">
+    <h1>Picky<span id="Pal">Pal</span></h1>
+    <p>Having trouble figuring out who should do which task?</p>
+    <p>Picky Pal will help you assign tasks to your team mates</p>
+    <button  class="nextButton" id="page1Button">Let's Go!</button>
+    </div>
+    <div class="image">
+        <img src="Images/page1_image.png" alt="Team working">
+        <!-- <a href="https://www.freepik.com/free-vector/social-change-abstract-concept-vector-illustration-human-relationships-social-justice-behavior-public-demonstration-collective-protest-shout-megaphone-change-innovation-abstract-metaphor_11663910.htm#query=team&position=0&from_view=search&track=sph&uuid=2fc61765-3d39-4b16-96ab-29d0cf42f736">Image by vectorjuice</a> -->
+    </div>
+</div>
+<!-- Page1 ends -->
+<!-- Page2 begins -->
+<div class="countPage">
+    <div class="count-image">
+        <img src="Images/page2_image.png" alt="two people fixing a puzzle with a bulb in the background">
+        <!-- <a href="https://www.freepik.com/free-vector/workforce-organization-management_12085341.htm#from_view=detail_author">Image by vectorjuice</a> on Freepik -->
+    </div>
+   
+
+    <form action="#" method="post" id="countForm" name="form_count">
+        <div class="content2">
+        <div class="item">
+                <p><label for="count"  id="count-heading"><p class="headings">Enter the number of</p><p class="headings">team members</p></label>
+        </div>
+        <div class="item">
+            <p id="countValidation">*Please give a number</p>
+        </div> 
+        <div class="item"> 
+            <input type="text" id="count" name="f_Count" class="textbox" required/></p>
+        </div> 
+        <div class="buttons">
+        <div><button type="button" class="backButton" id="countBack">Back</button></div>
+        <div><input type="submit" class="nextButton"  id="countNext" value="Next" /></div>
+    </div>
+    </div>
+    </form>
+</div>
+<!-- Page 2 ends -->
+<!-- Page 3 begins -->
+<div class="namePage">
+    <div class="nameDesc">
+    <form action="#" method="post" id="nameForm" name="form_names">
+        <div class="content2">
+            <div>
+                <p class="headings">Enter the names of</p> <p class="headings">team members</p>
+            </div>
+       <div><div id="nameList"></div></div> 
+       <div class="buttons">
+        <div><button class="backButton" id="nameBack">Back</button></div>
+        <div><input type="submit" class="nextButton" id="nameNext" value="Next" /></div>
+    </div>
+    </div>
+    </form>
+</div>
+<div class="name-image">
+    <img src="Images/page3_image.png" alt="one person evaluating two people">
+    <!-- <a href="https://www.freepik.com/free-vector/software-engineer-statistician-visualizer-analyst-working-project-big-data-conference-big-data-presentation-data-science-concept_11667646.htm#query=team&position=5&from_view=search&track=sph&uuid=acb1e233-3680-4c7b-8694-f1f5b064579b">Image by vectorjuice</a> on Freepik -->
+</div>
+</div>
+<!-- Page 3 ends -->
+<!-- Page 4 begins -->
+<div class="taskPage">
+    <div class="taskimage">
+        <img src="Images/page4_image-removebg.png" alt="4 people fixing a puzzle">
+        <!-- <a href="https://www.freepik.com/free-vector/mutual-assistance-abstract-concept-vector-illustration-mutual-assistance-program-help-each-other-business-support-mobile-banking-team-work-group-people-shaking-hands-abstract-metaphor_11663878.htm#query=team&position=2&from_view=search&track=sph&uuid=95979034-6872-4e94-9e54-dff40ce5d924">Image by vectorjuice</a> on Freepik -->
+    </div>
+    <div>
+    <form action="#" method="post" id="taskForm" name="form_task">
+    <div>
+        <h2 class="headings">Enter the tasks that needs to be assigned</h2>
+    </div>
+    <div>
+        <div id="taskList"></div>
+    </div>
+    <div class="buttons">
+       <div> <button class="backButton" id="taskBack">Back</button></div>
+       <div><input type="submit" class="nextButton" id="taskNext"value="Generate" /></div>
+    </div>
+    </form>
+</div>
+</div>
+<!-- Page 4 ends -->
+<div class="resultPage">
+
+    <img class="resultimage" src="Images/final_image.png" alt="teamwork">
+    <!-- <a href="https://www.freepik.com/free-vector/human-relations-abstract-concept-vector-illustration-career-success-publicrelations-businessman-handshake-team-building-cooperation-participation-human-resources-company-abstract-metaphor_11663904.htm#query=team&position=3&from_view=search&track=sph&uuid=8e5cfab0-8537-4ad2-9348-2d9a83f469b2">Image by vectorjuice</a> on Freepik -->
+    <div class="pagecontent">
+<form action="#" method="post" id="resultForm" name="form_result">
+    
+    <div class="finalresult">
+        <h2 class="heading-last">Here is your task list</h2>
+        <div class="Result">
+            <div class="list">
+                <p class="category">Team Member</p>
+                 <div id="names"></div>
+            </div>
+            <div class="list">
+                <p class="category">Task Assigned</p>
+                <div id="tasks"></div>
+            </div>
+        </div>
+    </div>
+    <div class="msg"><h2 class="finalmsg">Now get to work people!!</h2></div>
+    
+    <div class="button-last">
+   <div><button type="submit" class="backButton" id="goHome">Home</a></button></div>
+    <div>
+        <input type="submit" class="nextButton" value="Regenerate"/>
+    </div>
+    </div>
+</div>
+</form>
+</div>
+<!-- Page 4 ends -->
+</body>
+</html>
